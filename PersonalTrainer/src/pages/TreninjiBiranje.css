@@ -1,0 +1,194 @@
+.biranje-content {
+  min-height: calc(100vh - 160px);
+  padding-top: 80px;
+  background-color: #0d0d0d;
+}
+
+.biranje-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  color: #1db954;
+  border: 2px solid #1db954;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #1db954 0%, #148a3c 100%);
+  color: #ffffff;
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+}
+
+.back-button:focus {
+  outline: none;
+}
+
+.back-button:active {
+  outline: none;
+}
+
+.biranje-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1db954;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.biranje-subtitle {
+  font-size: 1.3rem;
+  color: #cccccc;
+  margin-bottom: 4rem;
+}
+
+.biranje-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.biranje-card {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+}
+
+.biranje-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(29, 185, 84, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.biranje-card:hover::before {
+  opacity: 1;
+}
+
+.biranje-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(29, 185, 84, 0.3);
+}
+
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.card-image {
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.biranje-card:hover .card-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.biranje-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.biranje-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1db954;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.biranje-card p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.card-arrow {
+  font-size: 2rem;
+  color: #1db954;
+  transition: transform 0.4s ease;
+}
+
+.biranje-card:hover .card-arrow {
+  transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+  .biranje-title {
+    font-size: 2rem;
+  }
+
+  .biranje-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .biranje-cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .biranje-card {
+    padding: 2rem 1.5rem;
+    min-height: 250px;
+  }
+
+  .card-icon {
+    font-size: 3rem;
+  }
+
+  .card-image {
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .biranje-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .biranje-card p {
+    font-size: 1rem;
+  }
+}
