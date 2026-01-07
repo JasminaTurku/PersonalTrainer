@@ -5,6 +5,32 @@
   z-index: 9999;
 }
 
+.contact-button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1db954;
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .contact-button {
   width: 70px;
   height: 70px;
@@ -90,6 +116,7 @@
   display: none;
 }
 
+/* Mobile and tablet screens */
 @media (max-width: 768px) {
   .floating-contact {
     bottom: 1.5rem;
@@ -106,21 +133,130 @@
     height: 28px;
   }
 
+  .contact-label {
+    font-size: 14px;
+  }
+
   .contact-menu {
-    min-width: 180px;
-    padding: 1rem;
+    bottom: 80px;
+    gap: 0.8rem;
   }
 
   .contact-item {
-    padding: 0.75rem;
+    width: 55px;
+    height: 55px;
   }
 
   .contact-item svg {
     width: 24px;
     height: 24px;
   }
+}
 
-  .contact-item span {
-    font-size: 0.9rem;
+/* Small mobile screens */
+@media (max-width: 480px) {
+  .floating-contact {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .contact-button {
+    width: 55px;
+    height: 55px;
+  }
+
+  .contact-button svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .contact-label {
+    font-size: 13px;
+  }
+
+  .contact-menu {
+    bottom: 70px;
+    gap: 0.7rem;
+  }
+
+  .contact-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-item svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .floating-contact {
+    bottom: 0.8rem;
+    right: 0.8rem;
+  }
+
+  .contact-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-label {
+    font-size: 12px;
+  }
+
+  .contact-menu {
+    bottom: 65px;
+    gap: 0.6rem;
+  }
+
+  .contact-item {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact-item svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .contact-button,
+  .contact-item {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .contact-button,
+  .contact-item {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Landscape mode adjustments */
+@media (max-width: 896px) and (orientation: landscape) {
+  .floating-contact {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .contact-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-menu {
+    bottom: 65px;
   }
 }

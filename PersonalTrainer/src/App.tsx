@@ -210,6 +210,22 @@ function App() {
             >
               ›
             </button>
+            <div className="testimonial-arrows-mobile">
+              <button
+                className="testimonial-arrow testimonial-arrow-left-mobile"
+                onClick={prevTestimonial}
+                aria-label="Prethodni klijent"
+              >
+                ‹
+              </button>
+              <button
+                className="testimonial-arrow testimonial-arrow-right-mobile"
+                onClick={nextTestimonial}
+                aria-label="Sledeći klijent"
+              >
+                ›
+              </button>
+            </div>
           </div>
         </section>
       </main>
