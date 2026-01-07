@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./TreninjiBiranje.css";
@@ -7,6 +8,10 @@ import kodKuceImg from "../assets/kodKuce1.jfif";
 
 const TreninziMuskarciBiranje = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
