@@ -58,59 +58,16 @@ const Header = () => {
 
         <nav className={`nav ${isMobileMenuOpen ? "mobile-open" : ""}`}>
           <ul className="nav-list">
-            {!isTreninziPage && (
-              <li
-                className="dropdown"
-                onMouseEnter={() => {
-                  if (window.innerWidth > 1024) {
-                    setIsDropdownOpen(true);
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (window.innerWidth > 1024) {
-                    setIsDropdownOpen(false);
-                  }
-                }}
-              >
-                <a
-                  href="#services"
-                  onClick={(e) => {
-                    if (window.innerWidth <= 1024) {
-                      e.preventDefault();
-                      setIsDropdownOpen(!isDropdownOpen);
-                    }
-                  }}
-                >
-                  Treninzi
-                </a>
-                {isDropdownOpen && (
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link to="/treninzi/muskarci" onClick={closeMobileMenu}>
-                        Muškarci
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/treninzi/zene" onClick={closeMobileMenu}>
-                        Žene
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/treninzi/50-plus" onClick={closeMobileMenu}>
-                        +50
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/treninzi/trudnice" onClick={closeMobileMenu}>
-                        Program za trudnice
-                      </Link>
-                    </li>
-                  </ul>
-                )}
-              </li>
-            )}
             {isHomePage ? (
               <>
+                <li>
+                  <a
+                    href="#programs"
+                    onClick={(e) => handleScrollLink(e, "#programs")}
+                  >
+                    Vrste programa
+                  </a>
+                </li>
                 <li>
                   <a
                     href="#about"

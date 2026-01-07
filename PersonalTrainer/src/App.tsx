@@ -13,9 +13,43 @@ import transformacija7 from "./assets/transformacija7.jpeg";
 import transformacija8 from "./assets/transformacija8.jpeg";
 import transformacija9 from "./assets/transformacija9.jpeg";
 import transformacija10 from "./assets/transformacija10.jpeg";
+import covekImg from "./assets/covek.jpg";
+import zenaImg from "./assets/zena.jpg";
+import zene50Img from "./assets/zene50.jpg";
+import trudniceImg from "./assets/trudnice.jpg";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
+  const programs = [
+    {
+      title: "Muškarci",
+      description: "Programi za izgradnju mišićne mase i definiciju",
+      route: "/treninzi/muskarci",
+      image: covekImg,
+    },
+    {
+      title: "Žene",
+      description: "Specijalizovani programi za žensku transformaciju",
+      route: "/treninzi/zene",
+      image: zenaImg,
+    },
+    {
+      title: "+50",
+      description: "Prilagođeni programi za osobe 50+",
+      route: "/treninzi/50-plus",
+      image: zene50Img,
+    },
+    {
+      title: "Trudnice",
+      description: "Bezbedni i efektni programi za trudnice",
+      route: "/treninzi/trudnice",
+      image: trudniceImg,
+    },
+  ];
+
   const transformations = [
     transformacija1,
     transformacija2,
@@ -96,6 +130,31 @@ function App() {
             <h1>PODIGNITE VAŠ TRENING NA VIŠI NIVO</h1>
             <p>Personal training prilagođen vašim ciljevima</p>
             <button className="cta-button">ZAPOČNI SARADNJU</button>
+          </div>
+        </section>
+
+        <section id="programs" className="programs-section">
+          <h2>VRSTE PROGRAMA</h2>
+          <p className="programs-subtitle">
+            Izaberite program koji odgovara vašim ciljevima
+          </p>
+          <div className="programs-grid">
+            {programs.map((program, index) => (
+              <div
+                key={index}
+                className="program-card"
+                onClick={() => navigate(program.route)}
+              >
+                <div className="program-card-inner">
+                  <div className="program-image">
+                    <img src={program.image} alt={program.title} />
+                  </div>
+                  <h3>{program.title}</h3>
+                  <p>{program.description}</p>
+                  <button className="program-button">Saznaj više</button>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
