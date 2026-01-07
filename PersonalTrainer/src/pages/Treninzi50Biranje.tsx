@@ -18,9 +18,13 @@ const Treninzi50Biranje = () => {
       <Header />
       <main className="biranje-content">
         <section className="biranje-section">
-          <button onClick={() => navigate(-1)} className="back-button">
-            Nazad
-          </button>
+          <nav className="breadcrumbs">
+            <Link to="/" className="breadcrumb-link">
+              Početna
+            </Link>
+            <span className="breadcrumb-separator">/</span>
+            <span className="breadcrumb-current">Treninzi 50+</span>
+          </nav>
           <h1 className="biranje-title">TRENINZI ZA 50+</h1>
           <p className="biranje-subtitle">Izaberite gde želite da trenirate</p>
           <div className="biranje-cards">

@@ -166,6 +166,10 @@ function App() {
                 Profesionalni sam trener sa preko 10 godina iskustva u svetu
                 fitnesa i transformacije tela.
               </p>
+              <div className="about-image-mobile">
+                <img src={aboutImg} alt="Personal Trainer" />
+              </div>
+
               <p>
                 Tokom moje karijere, imao sam čast da radim sa stotinama
                 klijenata, pomažući im da ostvare svoje ciljeve - od gubljenja
@@ -179,14 +183,8 @@ function App() {
                 godinama praktičnog iskustva, garantujući vam najbrže i
                 najefikasnije rezultate.
               </p>
-              <p>
-                Veravam u holistički pristup - ne samo da ću vas voditi kroz
-                treninge, već ću vam pružiti sveobuhvatnu podršku u ishrani,
-                motivaciji i mentalnom pristupu treningu. Vaš uspeh je moj
-                uspeh.
-              </p>
             </div>
-            <div className="about-image">
+            <div className="about-image-desktop">
               <img src={aboutImg} alt="Personal Trainer" />
             </div>
           </div>

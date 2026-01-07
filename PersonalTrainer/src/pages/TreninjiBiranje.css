@@ -12,35 +12,45 @@
   position: relative;
 }
 
-.back-button {
-  position: absolute;
-  top: 3rem;
-  right: 2rem;
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+}
+
+.breadcrumb-link {
   color: #1db954;
-  border: 2px solid #1db954;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
-  outline: none;
+  font-weight: 500;
 }
 
-.back-button:hover {
-  background: linear-gradient(135deg, #1db954 0%, #148a3c 100%);
-  color: #ffffff;
-  transform: translateX(5px);
-  box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+.breadcrumb-link:hover {
+  color: #148a3c;
+  text-decoration: underline;
 }
 
-.back-button:focus {
-  outline: none;
+.breadcrumb-separator {
+  margin: 0 0.8rem;
+  color: #666;
 }
 
-.back-button:active {
-  outline: none;
+.breadcrumb-current {
+  color: #cccccc;
+  font-weight: 500;
+}
+
+/* Hide breadcrumbs on mobile and tablet */
+@media (max-width: 1024px) {
+  .breadcrumbs {
+    display: none;
+  }
 }
 
 .biranje-title {

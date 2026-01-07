@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Header from "../components/Header";
 import "./Treninzi.css";
 import nogeImg from "../assets/noge.webp";
@@ -7,9 +8,12 @@ import grudiImg from "../assets/grudi.jpg";
 import ramenaImg from "../assets/ramena.jpg";
 import rukeImg from "../assets/ruke.jpg";
 import ledjaImg from "../assets/ledja.jpg";
+import demoVideo from "../assets/5319426-uhd_2160_3840_25fps.mp4";
 
 const TreninziZene = () => {
   const navigate = useNavigate();
+  const [showVideoPopup, setShowVideoPopup] = useState(false);
+  const [selectedMuscle, setSelectedMuscle] = useState("");
   const muscleGroups = [
     {
       id: 1,
@@ -64,6 +68,17 @@ const TreninziZene = () => {
     <>
       <Header />
       <main className="treninzi-page">
+        <nav className="breadcrumbs-top">
+          <Link to="/" className="breadcrumb-link">
+            Početna
+          </Link>
+          <span className="breadcrumb-separator">/</span>
+          <Link to="/treninzi/zene" className="breadcrumb-link">
+            Treninzi za žene
+          </Link>
+          <span className="breadcrumb-separator">/</span>
+          <span className="breadcrumb-current">Izaberite program</span>
+        </nav>
         <section className="treninzi-hero">
           <h1>TRENINZI ZA ŽENE</h1>
           <p>Prilagođeni programi za postizanje vaših ciljeva</p>
@@ -71,9 +86,6 @@ const TreninziZene = () => {
 
         <section className="muscle-groups-section">
           <div className="muscle-groups-container">
-            <button onClick={() => navigate(-1)} className="back-button">
-              Nazad
-            </button>
             <h2>Izaberite program</h2>
             <div className="cards-grid">
               {muscleGroups.map((group) => (
@@ -85,17 +97,46 @@ const TreninziZene = () => {
                   />
                   <h3>{group.title}</h3>
                   <p>{group.description}</p>
-                  <Link
-                    to={`/treninzi/zene/${group.id}`}
+                  <button
+                    onClick={() => {
+                      setSelectedMuscle(group.title);
+                      setShowVideoPopup(true);
+                    }}
                     className="card-button"
                   >
                     Pogledaj
-                  </Link>
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+        {showVideoPopup && (
+          <div
+            className="video-popup-overlay"
+            onClick={() => setShowVideoPopup(false)}
+          >
+            <div
+              className="video-popup-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="video-popup-close"
+                onClick={() => setShowVideoPopup(false)}
+              >
+                ×
+              </button>
+              <h3 className="video-popup-title">
+                {selectedMuscle} - Demo Video
+              </h3>
+              <video controls autoPlay className="video-popup-player">
+                <source src={demoVideo} type="video/mp4" />
+                Vaš pretraživač ne podržava video.
+              </video>
+            </div>
+          </div>
+        )}
 
         <footer className="footer">
           <div className="footer-content">
