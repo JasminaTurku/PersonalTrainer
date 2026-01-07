@@ -3,11 +3,9 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-  const isTreninziPage = location.pathname.startsWith("/treninzi");
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,7 +13,6 @@ const Header = () => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    setIsDropdownOpen(false);
   };
 
   const handleScrollLink = (

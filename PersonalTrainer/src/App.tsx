@@ -101,10 +101,6 @@ function App() {
     return () => clearInterval(interval);
   }, [transformations.length]);
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
   const nextTestimonial = () => {
     setTestimonialIndex((prev) => (prev + 1) % testimonials.length);
   };

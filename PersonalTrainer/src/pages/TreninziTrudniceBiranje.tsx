@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -7,8 +7,6 @@ import teretanaImg from "../assets/teretana.jpg";
 import kodKuceImg from "../assets/kodKuce1.jfif";
 
 const TreninziTrudniceBiranje = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

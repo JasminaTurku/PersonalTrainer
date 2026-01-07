@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import Header from "../components/Header";
 import "./Treninzi.css";
@@ -11,7 +11,6 @@ import trbuhImg from "../assets/trbuh.jpg";
 import demoVideo from "../assets/5319426-uhd_2160_3840_25fps.mp4";
 
 const Treninzi50Plus = () => {
-  const navigate = useNavigate();
   const [showVideoPopup, setShowVideoPopup] = useState(false);
   const [selectedMuscle, setSelectedMuscle] = useState("");
   const muscleGroups = [
