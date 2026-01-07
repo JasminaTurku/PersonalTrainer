@@ -317,11 +317,13 @@
     gap: 1.5rem;
     height: auto;
     min-height: 450px;
+    align-items: center;
   }
 
   .testimonial-card {
     padding: 2rem;
     height: 320px;
+    min-height: 320px;
   }
 
   .testimonial-arrow {
@@ -458,11 +460,13 @@
   .testimonials-container {
     gap: 1rem;
     min-height: 420px;
+    align-items: center;
   }
 
   .testimonial-card {
     padding: 1.5rem;
     height: 300px;
+    min-height: 300px;
   }
 
   .testimonial-arrow-left,
@@ -475,6 +479,7 @@
     justify-content: center;
     gap: 2rem;
     width: 100%;
+    margin-top: 1rem;
   }
 
   .testimonial-arrow-left-mobile,
@@ -722,14 +727,14 @@
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  width: 2px;
+  height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
   border: none;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 4px;
+  padding: 2px;
+  outline: none;
 }
 
 .dot:hover {
@@ -739,7 +744,7 @@
 
 .dot.active {
   background-color: #1db954;
-  width: 32px;
+  width: 2px;
   border-radius: 6px;
   transform: scale(1);
 }
@@ -1015,7 +1020,7 @@
   .testimonial-arrow,
   .dot,
   .social-link {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 30px;
+    min-width: 30px;
   }
 }

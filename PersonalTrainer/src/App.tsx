@@ -158,16 +158,6 @@ function App() {
                 ))}
               </div>
             </div>
-            <div className="carousel-dots">
-              {transformations.map((_, index) => (
-                <button
-                  key={index}
-                  className={`dot ${index === currentIndex ? "active" : ""}`}
-                  onClick={() => goToSlide(index)}
-                  aria-label={`Slide ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
         </section>
 
