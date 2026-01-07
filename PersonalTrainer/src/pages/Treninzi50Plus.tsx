@@ -1,14 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import "./Treninzi.css";
-import nogeImg from "../assets/noge.webp";
-import trbuhImg from "../assets/trbuh.jpg";
 import grudiImg from "../assets/grudi.jpg";
+import ledjaImg from "../assets/ledja.jpg";
+import nogeImg from "../assets/noge.webp";
 import ramenaImg from "../assets/ramena.jpg";
 import rukeImg from "../assets/ruke.jpg";
-import ledjaImg from "../assets/ledja.jpg";
+import trbuhImg from "../assets/trbuh.jpg";
 
-const TreninziZene = () => {
+const Treninzi50Plus = () => {
   const navigate = useNavigate();
   const muscleGroups = [
     {
@@ -65,8 +65,8 @@ const TreninziZene = () => {
       <Header />
       <main className="treninzi-page">
         <section className="treninzi-hero">
-          <h1>TRENINZI ZA ŽENE</h1>
-          <p>Prilagođeni programi za postizanje vaših ciljeva</p>
+          <h1>TRENINZI ZA 50+</h1>
+          <p>Prilagođeni programi za održavanje snage i vitalnosti</p>
         </section>
 
         <section className="muscle-groups-section">
@@ -74,7 +74,7 @@ const TreninziZene = () => {
             <button onClick={() => navigate(-1)} className="back-button">
               Nazad
             </button>
-            <h2>Izaberite program</h2>
+            <h2>Izaberite mišićnu grupu</h2>
             <div className="cards-grid">
               {muscleGroups.map((group) => (
                 <div key={group.id} className="muscle-card">
@@ -86,7 +86,7 @@ const TreninziZene = () => {
                   <h3>{group.title}</h3>
                   <p>{group.description}</p>
                   <Link
-                    to={`/treninzi/zene/${group.id}`}
+                    to={`/treninzi/50-plus/${group.id}`}
                     className="card-button"
                   >
                     Pogledaj
@@ -179,4 +179,4 @@ const TreninziZene = () => {
   );
 };
 
-export default TreninziZene;
+export default Treninzi50Plus;

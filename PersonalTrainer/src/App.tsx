@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import FloatingContact from "./components/FloatingContact";
 import backgroundImg from "./assets/slika1.jfif";
 import aboutImg from "./assets/slike2.jfif";
 import transformacija1 from "./assets/transformacija1.jpeg";
@@ -83,6 +84,7 @@ function App() {
   return (
     <>
       <Header />
+      <FloatingContact />
       <main className="main-content">
         <section
           id="home"
