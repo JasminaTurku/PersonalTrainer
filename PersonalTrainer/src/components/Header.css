@@ -206,6 +206,15 @@
   cursor: pointer;
   padding: 0;
   z-index: 1002;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-menu:focus,
+.hamburger-menu:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .hamburger-line {
@@ -271,6 +280,11 @@
     width: 100%;
   }
 
+  .nav-list li:has(.contact-link) {
+    width: auto;
+    padding: 0;
+  }
+
   .nav-list li a {
     display: block;
     padding: 1rem 2rem;
@@ -280,6 +294,16 @@
 
   .nav-list li a::after {
     display: none;
+  }
+
+  /* Održavanje konzistentne veličine Kontakt dugmeta */
+  .contact-link {
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.95rem !important;
+    display: inline-block;
+    width: auto;
+    margin: 1rem 0 1rem calc(2rem - 0.9rem);
+    border-bottom: none !important;
   }
 
   .dropdown-menu {
@@ -328,9 +352,23 @@
     max-width: 300px;
   }
 
+  .nav-list li:has(.contact-link) {
+    width: auto;
+    padding: 0;
+  }
+
   .nav-list li a {
     font-size: 1rem;
     padding: 0.9rem 1.5rem;
+  }
+
+  /* Održavanje konzistentne veličine Kontakt dugmeta */
+  .contact-link {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.9rem !important;
+    display: inline-block;
+    width: auto;
+    margin: 1rem 0 1rem calc(1.5rem - 0.8rem);
   }
 
   .dropdown-menu li a {
@@ -376,9 +414,23 @@
     width: 85%;
   }
 
+  .nav-list li:has(.contact-link) {
+    width: auto;
+    padding: 0;
+  }
+
   .nav-list li a {
     font-size: 0.95rem;
     padding: 0.85rem 1.2rem;
+  }
+
+  /* Održavanje konzistentne veličine Kontakt dugmeta */
+  .contact-link {
+    width: auto;
+    display: inline-block;
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.85rem !important;
+    margin: 1rem 0 1rem calc(1.2rem - 0.8rem);
   }
 
   .dropdown-menu li a {
@@ -391,19 +443,18 @@
   }
 }
 
-  .dropdown-menu {
-    min-width: 180px;
-    padding: 0.3rem 0;
-  }
+.dropdown-menu {
+  min-width: 180px;
+  padding: 0.3rem 0;
+}
 
-  .dropdown-menu li a {
-    font-size: 0.8rem;
-    padding: 0.6rem 1rem;
-  }
+.dropdown-menu li a {
+  font-size: 0.8rem;
+  padding: 0.6rem 1rem;
+}
 
-  .dropdown-menu li a:hover {
-    padding-left: 1.5rem;
-  }
+.dropdown-menu li a:hover {
+  padding-left: 1.5rem;
 }
 
 /* Extra small screens */
@@ -454,6 +505,11 @@
     min-height: 44px;
     display: flex;
     align-items: center;
+  }
+
+  .nav-list li a.contact-link {
+    display: inline-flex;
+    width: fit-content;
   }
 
   .dropdown-menu li a {
