@@ -193,10 +193,14 @@
 .card-button:hover {
   background: linear-gradient(135deg, #1ed760 0%, #169948 100%);
   box-shadow: 0 0 20px rgba(29, 185, 84, 0.5);
+  border-color: #1ed760;
+  outline: none;
 }
 
-.card-button:focus {
+.card-button:focus,
+.card-button:focus-visible {
   outline: none;
+  box-shadow: none;
 }
 
 .card-button:active {
@@ -306,6 +310,144 @@
   background-color: #000000;
 }
 
+/* Code Popup Styles */
+.code-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.code-popup-content {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.8);
+  animation: slideUp 0.3s ease;
+  border: 2px solid rgba(29, 185, 84, 0.3);
+}
+
+.code-popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  outline: none;
+}
+
+.code-popup-close:hover {
+  color: #1db954;
+}
+
+.code-popup-close:focus {
+  outline: none;
+}
+
+.code-popup-title {
+  color: #1db954;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.code-popup-description {
+  color: #cccccc;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.code-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(29, 185, 84, 0.3);
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.code-input:focus {
+  border-color: #1db954;
+  background-color: rgba(29, 185, 84, 0.1);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.3);
+}
+
+.code-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.code-error {
+  color: #ff4444;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.code-submit-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1db954 0%, #148a3c 100%);
+  border: 2px solid #1db954;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(29, 185, 84, 0.3);
+  outline: none;
+}
+
+.code-submit-button:hover {
+  background: linear-gradient(135deg, #1ed760 0%, #169948 100%);
+  box-shadow: 0 0 25px rgba(29, 185, 84, 0.5);
+  border-color: #1ed760;
+  transform: translateY(-2px);
+}
+
+.code-submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 15px rgba(29, 185, 84, 0.4);
+}
+
 @media (max-width: 768px) {
   .treninzi-hero h1 {
     font-size: 2rem;
@@ -345,5 +487,33 @@
 
   .video-popup-player {
     max-height: 60vh;
+  }
+
+  .code-popup-content {
+    padding: 2rem 1.5rem;
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .code-popup-title {
+    font-size: 1.5rem;
+  }
+
+  .code-popup-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .code-input {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .code-popup-close {
+    font-size: 2rem;
+    width: 35px;
+    height: 35px;
+    top: 0.5rem;
+    right: 0.5rem;
   }
 }

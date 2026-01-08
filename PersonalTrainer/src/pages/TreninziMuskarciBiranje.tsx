@@ -28,12 +28,12 @@ const TreninziMuskarciBiranje = () => {
           <div className="biranje-cards">
             <Link to="/treninzi/muskarci/teretana" className="biranje-card">
               <img src={teretanaImg} alt="U Teretani" className="card-image" />
-              <h2>U TERETANI</h2>
+              <h2>TERETANA</h2>
               <p>
                 Profesionalni programi treninga sa opremom za maksimalan razvoj
                 snage i mišićne mase
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
 
             <Link to="/treninzi/muskarci/kuca" className="biranje-card">
@@ -43,7 +43,7 @@ const TreninziMuskarciBiranje = () => {
                 Efektivni treninzi sa minimalnom opremom ili sopstvenom težinom
                 tela koji donose rezultate
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
           </div>
         </section>

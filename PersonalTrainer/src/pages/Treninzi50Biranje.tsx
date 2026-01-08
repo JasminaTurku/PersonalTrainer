@@ -33,7 +33,7 @@ const Treninzi50Biranje = () => {
                 Prilagođeni programi za održavanje snage, mobilnosti i zdravlja
                 sa profesionalnom opremom
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
 
             <Link to="/treninzi/50-plus/kuca" className="biranje-card">
@@ -43,7 +43,7 @@ const Treninzi50Biranje = () => {
                 Sigurni i efektivni treninzi kod kuće fokusirani na funkcionalnu
                 snagu i vitalnost
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
           </div>
         </section>

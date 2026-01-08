@@ -33,7 +33,7 @@ const TreninziTrudniceBiranje = () => {
                 Bezbedni prenatalni treninzi u teretani sa stručnim vođenjem
                 prilagođenim svakom trimestru
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
 
             <Link to="/treninzi/trudnice/kuca" className="biranje-card">
@@ -43,7 +43,7 @@ const TreninziTrudniceBiranje = () => {
                 Nežni i efikasni programi vežbi koje možete raditi u udobnosti
                 svog doma tokom trudnoće
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
           </div>
         </section>

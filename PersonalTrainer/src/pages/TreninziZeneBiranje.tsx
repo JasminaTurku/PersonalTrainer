@@ -33,7 +33,7 @@ const TreninziZeneBiranje = () => {
                 Specijalizovani programi za oblikovanje tela, toniranje i
                 postizanje željene figure
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
 
             <Link to="/treninzi/zene/kuca" className="biranje-card">
@@ -43,7 +43,7 @@ const TreninziZeneBiranje = () => {
                 Fleksibilni home workout programi prilagođeni ženskim ciljevima
                 i potrebama
               </p>
-              <span className="card-arrow">→</span>
+              <span className="program-button">Saznaj više</span>
             </Link>
           </div>
         </section>
