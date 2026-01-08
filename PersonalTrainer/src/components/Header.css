@@ -92,7 +92,7 @@
 .nav-list {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
@@ -171,6 +171,27 @@
 
 .nav-list li a:hover::after {
   width: 100%;
+}
+
+/* Contact link styling - make it prominent */
+.contact-link {
+  background: linear-gradient(135deg, #1db954 0%, #148a3c 100%);
+  padding: 0.6rem 1.5rem !important;
+  border-radius: 25px;
+  font-weight: 700 !important;
+  box-shadow: 0 0 15px rgba(29, 185, 84, 0.4);
+  transition: all 0.3s ease;
+}
+
+.contact-link::after {
+  display: none !important;
+}
+
+.contact-link:hover {
+  background: linear-gradient(135deg, #1ed760 0%, #169948 100%);
+  box-shadow: 0 0 25px rgba(29, 185, 84, 0.6);
+  transform: translateY(-2px);
+  color: #ffffff !important;
 }
 
 /* Hamburger menu button */

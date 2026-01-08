@@ -2,10 +2,19 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="footer-content">
         <div className="footer-text">
           <p>Vaš partner u postizanju vrhunske forme</p>
+          <div className="footer-contact">
+            <h3>Možete me naći na ovoj adresi:</h3>
+            <p className="footer-address">Gym Town Teretana</p>
+            <p className="footer-phone">📞 Kontakt: 061 123 4567</p>
+            <p className="footer-email">
+              ✉️ E-mail: nemanja.mladenovic@gmail.com
+            </p>
+            <p className="footer-instagram">📷 Instagram: @inseniti_</p>
+          </div>
         </div>
         <div className="social-links">
           <a

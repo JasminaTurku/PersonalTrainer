@@ -22,12 +22,16 @@ const Header = () => {
     e.preventDefault();
     closeMobileMenu();
 
-    setTimeout(() => {
-      const element = document.querySelector(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 300);
+    if (!isHomePage) {
+      window.location.href = "/" + targetId;
+    } else {
+      setTimeout(() => {
+        const element = document.querySelector(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+    }
   };
 
   return (
@@ -39,15 +43,17 @@ const Header = () => {
           </div>
         </Link>
 
-        <button
-          className="hamburger-menu"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-        </button>
+        {isHomePage && (
+          <button
+            className="hamburger-menu"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+        )}
 
         {isMobileMenuOpen && (
           <div className="mobile-overlay" onClick={closeMobileMenu}></div>
@@ -85,6 +91,7 @@ const Header = () => {
                   <a
                     href="#contact"
                     onClick={(e) => handleScrollLink(e, "#contact")}
+                    className="contact-link"
                   >
                     Kontakt
                   </a>
