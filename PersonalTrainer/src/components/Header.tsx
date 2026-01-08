@@ -89,9 +89,8 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="#contact"
-                    onClick={(e) => handleScrollLink(e, "#contact")}
-                    className="contact-link"
+                    href="#footer"
+                    onClick={(e) => handleScrollLink(e, "#footer")}
                   >
                     Kontakt
                   </a>

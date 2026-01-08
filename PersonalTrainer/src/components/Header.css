@@ -173,27 +173,6 @@
   width: 100%;
 }
 
-/* Contact link styling - make it prominent */
-.contact-link {
-  background: linear-gradient(135deg, #1db954 0%, #148a3c 100%);
-  padding: 0.6rem 1.5rem !important;
-  border-radius: 25px;
-  font-weight: 700 !important;
-  box-shadow: 0 0 15px rgba(29, 185, 84, 0.4);
-  transition: all 0.3s ease;
-}
-
-.contact-link::after {
-  display: none !important;
-}
-
-.contact-link:hover {
-  background: linear-gradient(135deg, #1ed760 0%, #169948 100%);
-  box-shadow: 0 0 25px rgba(29, 185, 84, 0.6);
-  transform: translateY(-2px);
-  color: #ffffff !important;
-}
-
 /* Hamburger menu button */
 .hamburger-menu {
   display: none;
@@ -280,11 +259,6 @@
     width: 100%;
   }
 
-  .nav-list li:has(.contact-link) {
-    width: auto;
-    padding: 0;
-  }
-
   .nav-list li a {
     display: block;
     padding: 1rem 2rem;
@@ -294,16 +268,6 @@
 
   .nav-list li a::after {
     display: none;
-  }
-
-  /* Održavanje konzistentne veličine Kontakt dugmeta */
-  .contact-link {
-    padding: 0.5rem 0.9rem !important;
-    font-size: 0.95rem !important;
-    display: inline-block;
-    width: auto;
-    margin: 1rem 0 1rem calc(2rem - 0.9rem);
-    border-bottom: none !important;
   }
 
   .dropdown-menu {
@@ -352,23 +316,9 @@
     max-width: 300px;
   }
 
-  .nav-list li:has(.contact-link) {
-    width: auto;
-    padding: 0;
-  }
-
   .nav-list li a {
     font-size: 1rem;
     padding: 0.9rem 1.5rem;
-  }
-
-  /* Održavanje konzistentne veličine Kontakt dugmeta */
-  .contact-link {
-    padding: 0.5rem 0.8rem !important;
-    font-size: 0.9rem !important;
-    display: inline-block;
-    width: auto;
-    margin: 1rem 0 1rem calc(1.5rem - 0.8rem);
   }
 
   .dropdown-menu li a {

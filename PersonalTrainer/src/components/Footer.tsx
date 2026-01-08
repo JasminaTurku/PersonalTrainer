@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-text">
           <p>Vaš partner u postizanju vrhunske forme</p>
