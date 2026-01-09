@@ -1,7 +1,9 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import FloatingContact from "./components/FloatingContact";
+import FloatingContact, {
+  useFloatingContactStore,
+} from "./components/FloatingContact";
 import backgroundImg from "./assets/slika1.jfif";
 import aboutImg from "./assets/slike2.jfif";
 import transformacija1 from "./assets/transformacija1.jpeg";
@@ -23,7 +25,7 @@ import { useNavigate } from "react-router-dom";
 
 function App() {
   const navigate = useNavigate();
-
+  const { isOpen, setIsOpen } = useFloatingContactStore();
   const programs = [
     {
       title: "Muškarci",
@@ -67,12 +69,12 @@ function App() {
   const testimonials = [
     {
       name: "Marko Jovanović",
-      text: "Sa NM trenerom sarađujem već duži vremenski period i dosta mi znači što je uz mene. Uvek mi je bio podrška i motivacija, i sve ciljeve sam puno lakše ostvario uz njegovu pomoć. Profesionalizam i znanje su na najvišem nivou!",
+      text: "Sa Nemanjom sarađujem već duži vremenski period i dosta mi znači što je uz mene. Uvek mi je bio podrška i motivacija, i sve ciljeve sam puno lakše ostvario uz njegovu pomoć. Profesionalizam i znanje su na najvišem nivou!",
       rating: 5,
     },
     {
       name: "Ana Petrović",
-      text: "Treniram već duži vremenski period, ali sam se odlučila da treniram sa NM jer želim da uđem još ozbiljnije u celu priču i da postignem životnu formu. Za sad sam prezadovoljna saradnjom, svaka preporuka!",
+      text: "Treniram već duži vremenski period, ali sam se odlučila da treniram sa Nemanjom jer želim da uđem još ozbiljnije u celu priču i da postignem životnu formu. Za sad sam prezadovoljna saradnjom, svaka preporuka!",
       rating: 5,
     },
     {
@@ -82,7 +84,7 @@ function App() {
     },
     {
       name: "Jelena Simić",
-      text: "Nikada nisam bio disciplinovaniji u treningu. Personalizovan pristup i konstantna podrška su ono što me izdvaja od prethodnih iskustava sa trenerima. Konačno vidim rezultate o kojima sam sanjao!",
+      text: "Nikada nisam bila disciplinovanija u treningu. Personalizovan pristup i konstantna podrška su ono što Nemanju izdvaja od prethodnih iskustava sa trenerima. Konačno vidim rezultate o kojima sam sanjala!",
       rating: 5,
     },
   ];
@@ -122,7 +124,9 @@ function App() {
           <div className="hero-content">
             <h1>PODIGNITE VAŠ TRENING NA VIŠI NIVO</h1>
             <p>Personalni training prilagođen vašim ciljevima</p>
-            <button className="cta-button">ZAPOČNI SARADNJU</button>
+            <button className="cta-button" onClick={() => setIsOpen(!isOpen)}>
+              ZAPOČNI SARADNJU
+            </button>
           </div>
         </section>
 

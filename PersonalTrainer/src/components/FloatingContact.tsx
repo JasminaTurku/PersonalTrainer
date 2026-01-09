@@ -1,8 +1,18 @@
-import { useState } from "react";
 import "./FloatingContact.css";
+import { create } from "zustand";
+
+interface FloatingContactState {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+export const useFloatingContactStore = create<FloatingContactState>((set) => ({
+  isOpen: false,
+  setIsOpen: (isOpen) => set({ isOpen }),
+}));
 
 const FloatingContact = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useFloatingContactStore();
 
   return (
     <div className="floating-contact">
