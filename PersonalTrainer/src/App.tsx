@@ -123,7 +123,7 @@ function App() {
           <div className="hero-overlay"></div>
           <div className="hero-content">
             <h1>PODIGNITE VAŠ TRENING NA VIŠI NIVO</h1>
-            <p>Personalni training prilagođen vašim ciljevima</p>
+            <p>Personalni trening prilagođen vašim ciljevima</p>
             <button className="cta-button" onClick={() => setIsOpen(!isOpen)}>
               ZAPOČNI SARADNJU
             </button>
