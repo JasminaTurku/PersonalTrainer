@@ -27,8 +27,8 @@ const TreninziZeneBiranje = () => {
           <p className="biranje-subtitle">Izaberite gde želite da trenirate</p>
           <div className="biranje-cards">
             <Link to="/treninzi/zene/teretana" className="biranje-card">
-              <img src={teretanaImg} alt="U Teretani" className="card-image" />
               <h2>U TERETANI</h2>
+              <img src={teretanaImg} alt="U Teretani" className="card-image" />
               <p>
                 Specijalizovani programi za oblikovanje tela, toniranje i
                 postizanje željene figure
@@ -37,8 +37,8 @@ const TreninziZeneBiranje = () => {
             </Link>
 
             <Link to="/treninzi/zene/kuca" className="biranje-card">
-              <img src={kodKuceImg} alt="Kod Kuće" className="card-image" />
               <h2>KOD KUĆE</h2>
+              <img src={kodKuceImg} alt="Kod Kuće" className="card-image" />
               <p>
                 Fleksibilni home workout programi prilagođeni ženskim ciljevima
                 i potrebama

@@ -16,7 +16,7 @@ const FloatingContact = () => {
             ✕
           </button>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/inseniti_/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-item instagram"

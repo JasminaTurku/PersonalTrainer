@@ -127,7 +127,7 @@ const TreninziZene = () => {
                     }}
                     className="card-button"
                   >
-                    Pogledaj
+                    POGLEDAJ
                   </button>
                 </div>
               ))}

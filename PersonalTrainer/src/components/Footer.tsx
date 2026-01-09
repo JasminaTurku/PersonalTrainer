@@ -8,17 +8,35 @@ const Footer = () => {
           <p>Vaš partner u postizanju vrhunske forme</p>
           <div className="footer-contact">
             <h3>Možete me naći na ovoj adresi:</h3>
-            <p className="footer-address">Gym Town Teretana</p>
+            <p className="footer-address">
+              📍{" "}
+              <a
+                href="https://maps.app.goo.gl/FZNoXnCsueTmhNzC8?g_st=ipc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Gym Town Teretana, Niš
+              </a>
+            </p>
             <p className="footer-phone">📞 Kontakt: 061 123 4567</p>
             <p className="footer-email">
               ✉️ E-mail: nemanja.mladenovic@gmail.com
             </p>
-            <p className="footer-instagram">📷 Instagram: @inseniti_</p>
+            <p className="footer-instagram">
+              📷 Instagram:{" "}
+              <a
+                href="https://www.instagram.com/inseniti_/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @inseniti_
+              </a>
+            </p>
           </div>
         </div>
         <div className="social-links">
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/inseniti_/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"

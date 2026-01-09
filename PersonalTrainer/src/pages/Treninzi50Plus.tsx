@@ -127,7 +127,7 @@ const Treninzi50Plus = () => {
                     }}
                     className="card-button"
                   >
-                    Pogledaj
+                    POGLEDAJ
                   </button>
                 </div>
               ))}

@@ -27,8 +27,8 @@ const TreninziTrudniceBiranje = () => {
           <p className="biranje-subtitle">Izaberite gde želite da trenirate</p>
           <div className="biranje-cards">
             <Link to="/treninzi/trudnice/teretana" className="biranje-card">
-              <img src={teretanaImg} alt="U Teretani" className="card-image" />
               <h2>U TERETANI</h2>
+              <img src={teretanaImg} alt="U Teretani" className="card-image" />
               <p>
                 Bezbedni prenatalni treninzi u teretani sa stručnim vođenjem
                 prilagođenim svakom trimestru
@@ -37,8 +37,8 @@ const TreninziTrudniceBiranje = () => {
             </Link>
 
             <Link to="/treninzi/trudnice/kuca" className="biranje-card">
-              <img src={kodKuceImg} alt="Kod Kuće" className="card-image" />
               <h2>KOD KUĆE</h2>
+              <img src={kodKuceImg} alt="Kod Kuće" className="card-image" />
               <p>
                 Nežni i efikasni programi vežbi koje možete raditi u udobnosti
                 svog doma tokom trudnoće

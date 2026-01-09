@@ -27,8 +27,8 @@ const Treninzi50Biranje = () => {
           <p className="biranje-subtitle">Izaberite gde želite da trenirate</p>
           <div className="biranje-cards">
             <Link to="/treninzi/50-plus/teretana" className="biranje-card">
-              <img src={teretanaImg} alt="U Teretani" className="card-image" />
               <h2>U TERETANI</h2>
+              <img src={teretanaImg} alt="U Teretani" className="card-image" />
               <p>
                 Prilagođeni programi za održavanje snage, mobilnosti i zdravlja
                 sa profesionalnom opremom
@@ -37,8 +37,8 @@ const Treninzi50Biranje = () => {
             </Link>
 
             <Link to="/treninzi/50-plus/kuca" className="biranje-card">
-              <img src={kodKuceImg} alt="Kod Kuće" className="card-image" />
               <h2>KOD KUĆE</h2>
+              <img src={kodKuceImg} alt="Kod Kuće" className="card-image" />
               <p>
                 Sigurni i efektivni treninzi kod kuće fokusirani na funkcionalnu
                 snagu i vitalnost

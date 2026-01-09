@@ -127,7 +127,7 @@ const TreninziTrudnice = () => {
                     }}
                     className="card-button"
                   >
-                    Pogledaj
+                    POGLEDAJ
                   </button>
                 </div>
               ))}

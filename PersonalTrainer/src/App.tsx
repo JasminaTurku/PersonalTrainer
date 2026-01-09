@@ -139,10 +139,10 @@ function App() {
                 onClick={() => navigate(program.route)}
               >
                 <div className="program-card-inner">
+                  <h3>{program.title}</h3>
                   <div className="program-image">
                     <img src={program.image} alt={program.title} />
                   </div>
-                  <h3>{program.title}</h3>
                   <p>{program.description}</p>
                   <button className="program-button">Saznaj više</button>
                 </div>
