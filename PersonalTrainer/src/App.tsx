@@ -121,7 +121,7 @@ function App() {
           <div className="hero-overlay"></div>
           <div className="hero-content">
             <h1>PODIGNITE VAŠ TRENING NA VIŠI NIVO</h1>
-            <p>Personal training prilagođen vašim ciljevima</p>
+            <p>Personalni training prilagođen vašim ciljevima</p>
             <button className="cta-button">ZAPOČNI SARADNJU</button>
           </div>
         </section>

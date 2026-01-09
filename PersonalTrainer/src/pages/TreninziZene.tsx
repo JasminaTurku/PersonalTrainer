@@ -111,12 +111,12 @@ const TreninziZene = () => {
             <div className="cards-grid">
               {muscleGroups.map((group) => (
                 <div key={group.id} className="muscle-card">
+                  <h3>{group.title}</h3>
                   <img
                     src={group.image}
                     alt={group.title}
                     className="muscle-card-image"
                   />
-                  <h3>{group.title}</h3>
                   <p>{group.description}</p>
                   <button
                     onClick={() => {

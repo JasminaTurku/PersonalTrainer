@@ -280,6 +280,7 @@
   margin-bottom: 0.4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-top: 0rem;
 }
 
 .program-card p {
@@ -342,6 +343,7 @@
 
   .program-card h3 {
     font-size: 1.4rem;
+    margin-top: 0rem;
   }
 
   .program-card p {
@@ -430,6 +432,7 @@
 
   .program-card h3 {
     font-size: 1.5rem;
+    margin-top: 0rem;
   }
 
   .program-card p {
@@ -627,6 +630,7 @@
   .program-card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
+    margin-top: 0rem;
   }
 
   .program-card p {
@@ -957,8 +961,6 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .gallery-subtitle {
