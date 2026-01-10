@@ -40,7 +40,7 @@ function App() {
       image: zenaImg,
     },
     {
-      title: "+50",
+      title: "50+",
       description: "Prilagođeni programi za osobe 50+",
       route: "/treninzi/50-plus",
       image: zene50Img,
@@ -131,7 +131,7 @@ function App() {
         </section>
 
         <section id="programs" className="programs-section">
-          <h2>VRSTE PROGRAMA</h2>
+          <h2>PROGRAMI</h2>
           <p className="programs-subtitle">
             Izaberite program koji odgovara vašim ciljevima
           </p>

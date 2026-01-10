@@ -68,7 +68,7 @@ const Header = () => {
                     href="#programs"
                     onClick={(e) => handleScrollLink(e, "#programs")}
                   >
-                    Vrste programa
+                    Programi
                   </a>
                 </li>
                 <li>

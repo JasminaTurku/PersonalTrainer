@@ -114,7 +114,7 @@
 
 /* About Section */
 .about-section {
-  padding: 5rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   background-color: #1a1a1a;
 }
 
@@ -332,7 +332,7 @@
 
   .programs-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .program-card {
@@ -399,7 +399,7 @@
   }
 
   .about-section {
-    padding: 3rem 1.5rem;
+    padding: 1rem 2rem 2rem 2rem;
   }
 
   .programs-section {
@@ -530,7 +530,7 @@
   }
 
   .testimonials-section {
-    padding: 3rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .testimonials-section h2 {
@@ -817,7 +817,7 @@
   }
 
   .programs-grid {
-    gap: 1.5rem;
+    gap: 2rem;
     max-width: 100%;
   }
 
@@ -873,7 +873,7 @@
   }
 
   .about-section {
-    padding: 5rem 2rem;
+    padding: 1rem 2rem 5rem 2rem;
   }
 
   .about-container {
@@ -929,7 +929,7 @@
   }
 
   .testimonials-section {
-    padding: 3rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .testimonials-section h2 {
@@ -1039,7 +1039,7 @@
 
 /* Testimonials Section */
 .testimonials-section {
-  padding: 3rem 1.5rem;
+  padding: 1rem 1.5rem;
   background-color: #1a1a1a;
 }
 
